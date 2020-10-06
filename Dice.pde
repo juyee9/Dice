@@ -1,5 +1,4 @@
 int total = 0;
-int totalSum = 0;
 void setup()
 {
   size(600,700);
@@ -16,14 +15,13 @@ void draw()
     for(int y = 0; y < 601; y = y + 55)
     {
       //creates new die from class Die
-      Die uno = new Die(x,y);
-      uno.show();
-      uno.roll();
-      uno.totalandtotalSumBox();
+      Die one = new Die(x,y);
+      one.show();
+      one.roll();
+      one.total();
     }
   }
 }int total = 0;
-int totalSum = 0;
 void setup()
 {
   size(600,700);
@@ -40,10 +38,10 @@ void draw()
     for(int y = 0; y < 601; y = y + 55)
     {
       //creates new die from class Die
-      Die uno = new Die(x,y);
-      uno.show();
-      uno.roll();
-      uno.totalandtotalSumBox();
+      Die one = new Die(x,y);
+      one.show();
+      one.roll();
+      one.total();
     }
   }
 }
@@ -79,14 +77,12 @@ class Die //draws one die
     {
       ellipse(dieX+25,dieY+25,10,10);
       total = total + 1;
-      totalSum = totalSum + 1;
     }
     else if(dieRoll == 2)
     {
       ellipse(dieX+35, dieY+35, 10, 10);
       ellipse(dieX+15, dieY+15, 10, 10);
       total = total + 2;
-      totalSum = totalSum + 2;
     }
     else if(dieRoll == 3)
     {
@@ -94,7 +90,6 @@ class Die //draws one die
       ellipse(dieX+25, dieY+25, 10, 10);
       ellipse(dieX+35, dieY+35, 10, 10);
       total = total + 3;
-      totalSum = totalSum + 3;
     }
     else if(dieRoll == 4)
     {
@@ -102,8 +97,7 @@ class Die //draws one die
       ellipse(dieX+15, dieY+15, 10, 10);
       ellipse(dieX+35, dieY+35, 10, 10);
       ellipse(dieX+35, dieY+15, 10, 10);
-      total = total + 4;
-      totalSum = totalSum + 4;  
+      total = total + 4;  
     }
     else if(dieRoll == 5)
     {
@@ -113,7 +107,6 @@ class Die //draws one die
       ellipse(dieX+35, dieY+15, 10, 10);
       ellipse(dieX+25, dieY+25, 10, 10);
       total = total + 5;
-      totalSum = totalSum + 5;
     }
     else
     {
@@ -124,10 +117,10 @@ class Die //draws one die
       ellipse(dieX+35, dieY+25, 10, 10);
       ellipse(dieX+35, dieY+37, 10, 10);
       total = total + 6;
-      totalSum = totalSum + 6; 
+      
     }
   }
-  void totalandtotalSumBox()
+  void total()
   {
     //total box and num
     stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
@@ -136,14 +129,6 @@ class Die //draws one die
     rect(20,610,250,70);
     fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     text("Total: " + total,30,660);
-    
-    //totalSum box and num
-    stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    textSize(35);
-    rect(280,610,300,70);
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    text("All Rolls: " + totalSum,290,660);
   }
 }
 void mousePressed()
@@ -178,14 +163,12 @@ class Die //draws one die
     {
       ellipse(dieX+25,dieY+25,10,10);
       total = total + 1;
-      totalSum = totalSum + 1;
     }
     else if(dieRoll == 2)
     {
       ellipse(dieX+35, dieY+35, 10, 10);
       ellipse(dieX+15, dieY+15, 10, 10);
       total = total + 2;
-      totalSum = totalSum + 2;
     }
     else if(dieRoll == 3)
     {
@@ -193,7 +176,6 @@ class Die //draws one die
       ellipse(dieX+25, dieY+25, 10, 10);
       ellipse(dieX+35, dieY+35, 10, 10);
       total = total + 3;
-      totalSum = totalSum + 3;
     }
     else if(dieRoll == 4)
     {
@@ -201,8 +183,7 @@ class Die //draws one die
       ellipse(dieX+15, dieY+15, 10, 10);
       ellipse(dieX+35, dieY+35, 10, 10);
       ellipse(dieX+35, dieY+15, 10, 10);
-      total = total + 4;
-      totalSum = totalSum + 4;  
+      total = total + 4; 
     }
     else if(dieRoll == 5)
     {
@@ -212,7 +193,6 @@ class Die //draws one die
       ellipse(dieX+35, dieY+15, 10, 10);
       ellipse(dieX+25, dieY+25, 10, 10);
       total = total + 5;
-      totalSum = totalSum + 5;
     }
     else
     {
@@ -222,11 +202,10 @@ class Die //draws one die
       ellipse(dieX+35, dieY+13, 10, 10);
       ellipse(dieX+35, dieY+25, 10, 10);
       ellipse(dieX+35, dieY+37, 10, 10);
-      total = total + 6;
-      totalSum = totalSum + 6; 
+      total = total + 6; 
     }
   }
-  void totalandtotalSumBox()
+  void total()
   {
     //total box and num
     stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
@@ -236,12 +215,5 @@ class Die //draws one die
     fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     text("Total: " + total,30,660);
     
-    //totalSum box and num
-    stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    textSize(35);
-    rect(280,610,300,70);
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    text("All Rolls: " + totalSum,290,660);
   }
 }
