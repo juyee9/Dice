@@ -125,7 +125,7 @@ class Die //draws one die
     stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     textSize(35);
-    rect(20,610,250,70);
+    rect(150,610,250,70);
     fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     text("Total: " + total,30,660);
   }
@@ -210,7 +210,7 @@ class Die //draws one die
     stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     textSize(35);
-    rect(20,610,250,70);
+    rect(150,610,250,70);
     fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     text("Total: " + total,30,660);
   }
