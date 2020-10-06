@@ -119,6 +119,15 @@ class Die //draws one die
       total = total + 6;
     }
   }
+  void totalBox()
+  {
+    stroke(#000000);
+    fill(#ffffff);
+    textSize(35);
+    rect(20,610,250,70);
+    fill(#ffffff);
+    text("Total: " + total,30,660);
+  }
 }
 void mousePressed()
 {
@@ -196,10 +205,11 @@ class Die //draws one die
   }
   void totalBox()
   {
-    //total box and num
     stroke(#000000);
-    fill(#FFFFFF);
+    fill(#ffffff);
     textSize(35);
+    rect(20,610,250,70);
+    fill(#ffffff);
     text("Total: " + total,30,660);
   }
 }
