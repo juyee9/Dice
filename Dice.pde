@@ -119,14 +119,6 @@ class Die //draws one die
       total = total + 6;
     }
   }
-  void totalBox()
-  {
-    //total box and num
-    stroke(#000000);
-    fill(#FFFFFF);
-    textSize(35);
-    text("Total: " + total,30,660);
-  }
 }
 void mousePressed()
 {
