@@ -122,7 +122,7 @@ class Die //draws one die
   void totalBox()
   {
     stroke(#000000);
-    fill(#ffffff);
+    fill(#000000);
     textSize(35);
     rect(20,610,250,70);
     fill(#ffffff);
@@ -206,7 +206,7 @@ class Die //draws one die
   void totalBox()
   {
     stroke(#000000);
-    fill(#ffffff);
+    fill(#000000);
     textSize(35);
     rect(20,610,250,70);
     fill(#ffffff);
