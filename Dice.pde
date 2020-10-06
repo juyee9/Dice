@@ -8,7 +8,7 @@ void setup()
 void draw()
 {
   //changes background every click
-  background(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+  background 0;
   //rows and columns
   for(int x = 0; x < 601; x = x + 55)
   {
