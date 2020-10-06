@@ -3,7 +3,7 @@ void setup()
 {
   size(600,700);
   noLoop();
-  background(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+  background(#00FFFF);
 }
 void draw()
 {
@@ -15,10 +15,10 @@ void draw()
     for(int y = 0; y < 601; y = y + 55)
     {
       //creates new die from class Die
-      Die uno = new Die(x,y);
-      uno.show();
-      uno.roll();
-      uno.totalBox();
+      Die one = new Die(x,y);
+      one.show();
+      one.roll();
+     one.totalBox();
     }
   }
 }int total = 0;
@@ -26,7 +26,7 @@ void setup()
 {
   size(600,700);
   noLoop();
-  background(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+  background(#00FFFF);
 }
 void draw()
 {
@@ -38,10 +38,10 @@ void draw()
     for(int y = 0; y < 601; y = y + 55)
     {
       //creates new die from class Die
-      Die uno = new Die(x,y);
-      uno.show();
-      uno.roll();
-      uno.totalBox();
+      Die one = new Die(x,y);
+      one.show();
+      one.roll();
+      one.totalBox();
     }
   }
 }
@@ -70,8 +70,8 @@ class Die //draws one die
     //die dots
     //roll number
     dieRoll = (int)(Math.random()*6)+1;
-    stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+    stroke(#000000);
+    fill(#FFFFFF);
     //drawing the dots depending on dieRoll number
     if(dieRoll == 1)
     {
@@ -122,11 +122,9 @@ class Die //draws one die
   void totalBox()
   {
     //total box and num
-    stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+    stroke(#000000);
+    fill(#FFFFFF);
     textSize(35);
-    rect(150,610,250,70);
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     text("Total: " + total,30,660);
   }
 }
@@ -155,8 +153,8 @@ class Die //draws one die
     //die dots
     //roll number
     dieRoll = (int)(Math.random()*6)+1;
-    stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+    stroke(#000000);
+    fill(#FFFFFF);
     //drawing the dots depending on dieRoll number
     if(dieRoll == 1)
     {
@@ -207,11 +205,9 @@ class Die //draws one die
   void totalBox()
   {
     //total box and num
-    stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
+    stroke(#000000);
+    fill(#FFFFFF);
     textSize(35);
-    rect(150,610,250,70);
-    fill(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
     text("Total: " + total,30,660);
   }
 }
